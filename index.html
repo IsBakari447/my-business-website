@@ -8,7 +8,7 @@
 </head>
 <body>
     <header id="header">
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Main navigation">
             <a class="brand" href="#home">Mini Market</a>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
@@ -18,6 +18,68 @@
             </ul>
         </nav>
     </header>
-    
+
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+            <h1 id="home-heading">Good things for everyday living.</h1>
+            <p>Your neighborhood market for fresh finds, pantry favorites, and the little things that make a day better.</p>
+            <a class="button-link" href="#products">Explore our selection</a>
+        </section>
+
+        <section id="products" aria-labelledby="products-heading">
+            <h2 id="products-heading">A little bit of everything</h2>
+            <p class="section-intro">Everyday essentials, thoughtfully brought together.</p>
+            <div class="product-grid">
+                <article class="product-card">
+                    <span>Fresh picks</span>
+                    <h3>Fruit &amp; vegetables</h3>
+                    <p>Colorful staples for snacks, sides, and everything in between.</p>
+                </article>
+                <article class="product-card">
+                    <span>Pantry favorites</span>
+                    <h3>Everyday groceries</h3>
+                    <p>Reliable kitchen essentials to keep your shelves ready.</p>
+                </article>
+                <article class="product-card">
+                    <span>Little treats</span>
+                    <h3>Snacks &amp; drinks</h3>
+                    <p>A handy pick-me-up for your next break or trip out.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Your neighborhood market</h2>
+            <p>Mini Market is here to make everyday shopping feel easy. We bring useful essentials and friendly service together, so you can find what you need and get on with your day.</p>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="contact-layout">
+                <div class="contact-copy">
+                    <h2 id="contact-heading">Say hello</h2>
+                    <p>Have a question or want to get in touch? Send us a message and our team will be happy to hear from you.</p>
+                </div>
+                <form>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mini Market. All rights reserved.</p>
+    </footer>
 </body>
 </html>
