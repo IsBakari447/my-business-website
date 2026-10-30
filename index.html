@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Market</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header id="header">
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Huvudmeny">
             <a class="brand" href="#home">Mini Market</a>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-actions">
+                <ul class="menu">
+                    <li><a href="#home">Hem</a></li>
+                    <li><a href="#about">Om oss</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Mörkt tema</button>
+            </div>
         </nav>
     </header>
-    
+
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+            <div class="section-content">
+                <h1 id="home-heading">Välkommen till Mini Market</h1>
+                <p>Din närbutik för vardagens favoriter, färska varor och allt det lilla som gör dagen bättre.</p>
+                <a class="button-link" href="#contact">Kontakta oss</a>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <div class="section-content">
+                <h2 id="about-heading">En butik nära dig</h2>
+                <p>På Mini Market vill vi göra vardagshandeln enkel och trevlig. Här hittar du användbara basvaror, omtänksam service och sådant du behöver på vägen.</p>
+                <button class="message-toggle" id="info-toggle" type="button" aria-expanded="false" aria-controls="additional-info">Visa mer information</button>
+                <p id="additional-info" hidden>Vi finns här för vårt närområde och hjälper dig gärna att hitta det du söker. Välkommen in när det passar dig!</p>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="section-content contact-layout">
+                <div class="contact-copy">
+                    <h2 id="contact-heading">Kontakta oss</h2>
+                    <p>Har du en fråga eller vill du komma i kontakt med oss? Fyll i formuläret så visas en bekräftelse här på sidan.</p>
+                </div>
+                <form id="contact-form">
+                    <div>
+                        <label for="name">Namn</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="email">E-post</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Meddelande</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Visa bekräftelse</button>
+                    <p id="form-confirmation" role="status" aria-live="polite" hidden></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mini Market</p>
+    </footer>
 </body>
 </html>
