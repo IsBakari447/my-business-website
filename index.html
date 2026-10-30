@@ -5,21 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Market</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <header id="header">
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Main navigation">
             <a class="brand" href="#home">Mini Market</a>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="tes"></a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+            <h1 id="home-heading">Welcome to Mini Market</h1>
+            <p>Your neighborhood shop for everyday essentials.</p>
+            <a href="#about">Learn more about us</a>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Mini Market</h2>
+            <p>We make it easy to find the everyday items you need, with a friendly shopping experience for our community.</p>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact us</h2>
+            <p>Have a question? Send our team a message.</p>
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mini Market. All rights reserved.</p>
+    </footer>
 </body>
 </html>
