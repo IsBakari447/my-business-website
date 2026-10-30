@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Market</title>
+    <meta name="description" content="Välkommen till Mini Market – din lokala närbutik.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header">
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Huvudmeny">
             <a class="brand" href="#home">Mini Market</a>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+            <h1 id="home-heading">Välkommen till Mini Market</h1>
+            <p>Din lokala närbutik för vardagens behov.</p>
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Om Mini Market</h2>
+            <p>Vi är en närbutik som gör det enkelt att hitta det du behöver nära hemmet.</p>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Kontakta oss</h2>
+            <p>Har du frågor? Besök oss i butiken, så hjälper vi dig gärna.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mini Market</p>
+    </footer>
 </body>
 </html>
